@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="contracts\**" />
+    <Compile Remove="Templates\**" />
+    <Content Remove="contracts\**" />
+    <Content Remove="Templates\**" />
+    <EmbeddedResource Remove="contracts\**" />
+    <EmbeddedResource Remove="Templates\**" />
+    <None Remove="contracts\**" />
+    <None Remove="Templates\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="qa-pipeline.yml" />
+    <None Remove="testing-pipeline.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.2" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.55.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="6.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.15.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ALUXION.AutoMapper\ALUXION.AutoMapper.csproj" />
+    <ProjectReference Include="..\ALUXION.Repositories.Implementations\ALUXION.Repositories.Implementations.csproj" />
+    <ProjectReference Include="..\ALUXION.Repositories.Interfaces\ALUXION.Repositories.Interfaces.csproj" />
+    <ProjectReference Include="..\ALUXION.Services.Implementations\ALUXION.Services.Implementations.csproj" />
+    <ProjectReference Include="..\ALUXION.Services.Interfaces\ALUXION.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\ALUXION.Settings\ALUXION.Settings.csproj" />
+  </ItemGroup>
+
+</Project>
